@@ -1,0 +1,19 @@
+﻿@model MVCCashMachine.Models.PinModel
+@{
+    ViewBag.Title = "Pin name";
+}
+
+<h2>Please enter your card pin</h2>
+@{
+    using (Html.BeginForm("CheckPin", "Account"))
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            <p>
+                @Html.PasswordFor(m => m.Pin, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Pin, "", new { @class = "text-danger" })
+            </p>
+        </div>
+        <input type="submit" class="btn btn-default" value="Enter" />
+    }
+}

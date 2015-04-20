@@ -1,0 +1,1 @@
+D:\DevProjects\EmptyMVCATM\MvcAtm\obj\Debug\MvcAtm.csprojResolveAssemblyReference.cache

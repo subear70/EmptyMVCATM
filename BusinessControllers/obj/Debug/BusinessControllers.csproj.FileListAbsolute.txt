@@ -1,0 +1,5 @@
+D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\bin\Debug\BusinessControllers.dll
+D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\bin\Debug\BusinessControllers.pdb
+D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.csprojResolveAssemblyReference.cache
+D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.dll
+D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.pdb
