@@ -1,10 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using BusinessControllers;
 using MVCCashMachine.Models;
 
 namespace MVCCashMachine.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private BusinessController BusinessController //TODO - add support of the Unity to the project
@@ -15,55 +15,48 @@ namespace MVCCashMachine.Controllers
             }
         }
 
-        [AllowAnonymous]
-        public ActionResult LoginCard()
+        public ViewResult LoginCard()
         {
             return View("LoginCardView");
         }
 
-        [AllowAnonymous]
-        public ActionResult CheckCardNumber(CardModel model) //TODO: add server side validation
+        public ViewResult CheckCardNumber(CardModel model) //TODO: add server side validation
         {
             var isValid = BusinessController.CheckCardNumber(model.CardNumber);
             var retVal = isValid ? View("CheckPinView", new PinModel { CardNumber = model.CardNumber }) : View("LoginCardView");
             return retVal;
         }
 
-        [AllowAnonymous]
         public ActionResult CheckPin(PinModel model)
         {
             var isValid = BusinessController.CheckPinNumber(model.CardNumber, model.Pin);
             if (isValid)
             {
+                Session["CardNumber"] = model.CardNumber;
                 var redirect = RedirectToAction("GetOperations", "Home");
                 return redirect;
             }
             return View("CheckPinView", new PinModel { CardNumber = model.CardNumber, Pin = model.Pin });
         }
 
-        [AllowAnonymous]
-        public ActionResult GetOperations()
+        public ViewResult GetOperations()
         {
             return View("OperationsView");
         }
 
-        public ActionResult Index()
+        public ActionResult ShowBalance()
         {
-            return View();
+            return View("BalanceView");
         }
 
-        public ActionResult About()
+        public ActionResult ShowWithdrawal()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View("WithdrawalView");
         }
 
-        public ActionResult Contact()
+        public ActionResult WithdrawMoney()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View("WithdrawalResultView");
         }
     }
 }

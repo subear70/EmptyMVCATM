@@ -1,7 +1,17 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "OperationsView";
 }
 
 <h2>OperationsView</h2>
-
+@{
+    using (Html.BeginForm("ShowBalance", "Home"))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" class="btn btn-default" value="Balance" />
+    }
+    using (Html.BeginForm("ShowWithdrawal", "Home"))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" class="btn btn-default" value="Withdrawal" />
+    }
+}

@@ -7,6 +7,7 @@ using System.Web.Routing;
 
 namespace MvcAtm
 {
+
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
@@ -16,7 +17,7 @@ namespace MvcAtm
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "LoginCard", id = UrlParameter.Optional }
             );
         }
     }
