@@ -115,6 +115,7 @@
     <Compile Include="Models\PinModel.cs" />
     <Compile Include="Models\ServerValidatedModel.cs" />
     <Compile Include="Models\WithdrawalModel.cs" />
+    <Compile Include="Models\WithdrawalResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +130,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Home\ErrorView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using BusinessControllers;
+using MvcAtm.Models;
 using MVCCashMachine.Models;
 
 namespace MVCCashMachine.Controllers
@@ -17,6 +19,8 @@ namespace MVCCashMachine.Controllers
 
         public ViewResult LoginCard()
         {
+            Session["NumberOfTries"] = null;
+            Session["CardNumber"] = null;
             return View("LoginCardView");
         }
 
@@ -27,15 +31,28 @@ namespace MVCCashMachine.Controllers
             return retVal;
         }
 
-        public ActionResult CheckPin(PinModel model)
+        public ActionResult CheckPin(PinModel model) //TODO: need to refactor - too many returns
         {
-            var isValid = BusinessController.CheckPinNumber(model.CardNumber, model.Pin);
-            if (isValid)
+            Session["CardNumber"] = null;
+            var numberOfTriesObject = Session["NumberOfTries"];
+            var numberOfTries = numberOfTriesObject != null ? (int) numberOfTriesObject : 0;
+            var isValidResult = BusinessController.CheckPinNumber(model.CardNumber, model.Pin, numberOfTries);
+            if (isValidResult.Successful)
             {
                 Session["CardNumber"] = model.CardNumber;
                 var redirect = RedirectToAction("GetOperations", "Home");
                 return redirect;
             }
+            if (!isValidResult.Blocked)
+            {
+                numberOfTries++;
+                Session["NumberOfTries"] = numberOfTries;
+            }
+            else
+            {
+                return View("ErrorVIew", new ServerValidatedModel { ErrorModel = "Your card were blocked" });
+            }
+
             return View("CheckPinView", new PinModel { CardNumber = model.CardNumber, Pin = model.Pin });
         }
 
@@ -46,7 +63,8 @@ namespace MVCCashMachine.Controllers
 
         public ActionResult ShowBalance()
         {
-            return View("BalanceView");
+            var balance = BusinessController.GetCardBalance((long) Session["CardNumber"]);
+            return View("BalanceView", new BalanceModel{Balance = balance});
         }
 
         public ActionResult ShowWithdrawal()
@@ -54,9 +72,22 @@ namespace MVCCashMachine.Controllers
             return View("WithdrawalView");
         }
 
-        public ActionResult WithdrawMoney()
+        public ActionResult WithdrawMoney(WithdrawalModel model)
         {
-            return View("WithdrawalResultView");
+            var cardNumber = (long) Session["CardNumber"];
+            var withdrawalResult = BusinessController.WithdrawMoney(cardNumber,
+                model.WithdrawalAmmount);
+            if (withdrawalResult.Successfull)
+            {
+                return View("WithdrawalResultView", new WithdrawalResultModel
+                {
+                    Amount = model.WithdrawalAmmount,
+                    Balance = withdrawalResult.Balance,
+                    CardNumber = cardNumber,
+                    DateTime = DateTime.Now
+                });
+            }
+            return View("ErrorView", new ServerValidatedModel {ErrorModel = "Not enough money on account"});
         }
     }
 }

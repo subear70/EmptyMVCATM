@@ -1,7 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "WithdrawalResultView";
-}
+﻿@model MvcAtm.Models.WithdrawalResultModel
 
-<h2>WithdrawalResultView</h2>
+<h2>Withdrawal Result</h2>
+@Html.LabelFor(x => x.Amount, "Amount")
+@Html.DisplayTextFor(x => x.Amount)
+<br />
+@Html.LabelFor(x => x.Balance, "Balance")
+@Html.DisplayTextFor(x => x.Balance)
+<br />
+@Html.LabelFor(x => x.CardNumber, "CardNumber")
+@Html.DisplayTextFor(x => x.CardNumber)
+<br />
+@Html.LabelFor(x => x.DateTime, "DateTime")
+@Html.DisplayTextFor(x => x.DateTime)
 

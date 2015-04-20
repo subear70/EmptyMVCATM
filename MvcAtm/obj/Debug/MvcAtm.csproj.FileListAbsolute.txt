@@ -22,3 +22,5 @@ D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.dll
 D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.xml
 D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.SqlServer.dll
 D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.SqlServer.xml
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\Data.dll
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\Data.pdb

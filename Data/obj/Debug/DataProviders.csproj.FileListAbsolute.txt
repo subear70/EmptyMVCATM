@@ -16,3 +16,5 @@ D:\DevProjects\EmptyMVCATM\Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\DevProjects\EmptyMVCATM\Data\obj\Debug\DataProviders.csprojResolveAssemblyReference.cache
 D:\DevProjects\EmptyMVCATM\Data\obj\Debug\Data.dll
 D:\DevProjects\EmptyMVCATM\Data\obj\Debug\Data.pdb
+D:\DevProjects\EmptyMVCATM\Data\obj\Debug\Data.Migrations.AddUrl.resources
+D:\DevProjects\EmptyMVCATM\Data\obj\Debug\DataProviders.csproj.GenerateResource.Cache

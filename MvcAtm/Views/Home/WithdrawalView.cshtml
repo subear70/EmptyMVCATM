@@ -1,7 +1,15 @@
-﻿
+﻿@model MvcAtm.Models.WithdrawalModel
 @{
     ViewBag.Title = "WithdrawalView";
 }
+<h2>WithdrawalView</h2>
+@{
+    using (Html.BeginForm("WithdrawMoney", "Home"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.TextBoxFor(m => m.WithdrawalAmmount)
+        <input type="submit" class="btn btn-default" value="Withdraw" />
+    }
+}
 
-<h2>WithdrawalResultView</h2>
 
