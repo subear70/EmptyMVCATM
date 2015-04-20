@@ -1,0 +1,12 @@
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\CardTableFiller.exe.config
+D:\DevProjects\EmptyMVCATM\CardTableFiller\obj\Debug\CardTableFiller.csprojResolveAssemblyReference.cache
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\CardTableFiller.exe
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\CardTableFiller.pdb
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\Data.dll
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\EntityFramework.dll
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\EntityFramework.SqlServer.dll
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\Data.pdb
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\EntityFramework.xml
+D:\DevProjects\EmptyMVCATM\CardTableFiller\bin\Debug\EntityFramework.SqlServer.xml
+D:\DevProjects\EmptyMVCATM\CardTableFiller\obj\Debug\CardTableFiller.exe
+D:\DevProjects\EmptyMVCATM\CardTableFiller\obj\Debug\CardTableFiller.pdb

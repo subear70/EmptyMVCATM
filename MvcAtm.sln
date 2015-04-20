@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAtm", "MvcAtm\MvcAtm.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessControllers", "BusinessControllers\BusinessControllers.csproj", "{A28B2FB3-678E-4C8A-82B5-2588EFF11730}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviders", "Data\DataProviders.csproj", "{A289D875-6627-43B0-80B7-13E6E0E629A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTableFiller", "CardTableFiller\CardTableFiller.csproj", "{D8736C62-2F2B-4E75-9369-ABE44E4F4417}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A28B2FB3-678E-4C8A-82B5-2588EFF11730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28B2FB3-678E-4C8A-82B5-2588EFF11730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28B2FB3-678E-4C8A-82B5-2588EFF11730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A289D875-6627-43B0-80B7-13E6E0E629A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A289D875-6627-43B0-80B7-13E6E0E629A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A289D875-6627-43B0-80B7-13E6E0E629A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A289D875-6627-43B0-80B7-13E6E0E629A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8736C62-2F2B-4E75-9369-ABE44E4F4417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8736C62-2F2B-4E75-9369-ABE44E4F4417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8736C62-2F2B-4E75-9369-ABE44E4F4417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8736C62-2F2B-4E75-9369-ABE44E4F4417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

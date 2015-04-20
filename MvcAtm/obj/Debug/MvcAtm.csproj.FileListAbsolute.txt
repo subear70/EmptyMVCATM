@@ -18,3 +18,7 @@ D:\DevProjects\EmptyMVCATM\MvcAtm\bin\System.Web.Helpers.xml
 D:\DevProjects\EmptyMVCATM\MvcAtm\bin\System.Web.Mvc.xml
 D:\DevProjects\EmptyMVCATM\MvcAtm\obj\Debug\MvcAtm.dll
 D:\DevProjects\EmptyMVCATM\MvcAtm\obj\Debug\MvcAtm.pdb
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.dll
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.xml
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.SqlServer.dll
+D:\DevProjects\EmptyMVCATM\MvcAtm\bin\EntityFramework.SqlServer.xml

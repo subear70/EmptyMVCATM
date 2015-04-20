@@ -3,3 +3,15 @@ D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\bin\Debug\BusinessCont
 D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.csprojResolveAssemblyReference.cache
 D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.dll
 D:\DevProjects\TestMVC\MVCCashMachine\BusinessControllers\obj\Debug\BusinessControllers.pdb
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\BusinessControllers.dll.config
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\BusinessControllers.dll
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\BusinessControllers.pdb
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\Data.dll
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\EntityFramework.dll
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\EntityFramework.SqlServer.dll
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\Data.pdb
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\EntityFramework.xml
+D:\DevProjects\EmptyMVCATM\BusinessControllers\bin\Debug\EntityFramework.SqlServer.xml
+D:\DevProjects\EmptyMVCATM\BusinessControllers\obj\Debug\BusinessControllers.csprojResolveAssemblyReference.cache
+D:\DevProjects\EmptyMVCATM\BusinessControllers\obj\Debug\BusinessControllers.dll
+D:\DevProjects\EmptyMVCATM\BusinessControllers\obj\Debug\BusinessControllers.pdb
