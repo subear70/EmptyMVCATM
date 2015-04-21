@@ -1,11 +1,11 @@
-﻿using MvcAtm.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using MvcAtm.Models;
 
 namespace MVCCashMachine.Models
 {
-    public class PinModel : ServerValidatedModel
+    public class PinModel
     {
         public int Pin { get; set; }
-        public long CardNumber { get; set; }
-        public string ErrorMessage { get; set; }
+        public long CurrentCardNumber { get; set; } 
     }
 }

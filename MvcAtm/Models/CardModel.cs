@@ -1,10 +1,10 @@
-﻿using MvcAtm.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using MvcAtm.Models;
 
 namespace MVCCashMachine.Models
 {
-    public class CardModel : ServerValidatedModel
+    public class CardModel
     {
-        public long CardNumber { get; set; }
-        public string ErrorMessage { get; set; }
+        public string CardNumber { get; set; }
     }
 }

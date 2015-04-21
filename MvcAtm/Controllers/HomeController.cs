@@ -24,10 +24,23 @@ namespace MVCCashMachine.Controllers
             return View("LoginCardView");
         }
 
-        public ViewResult CheckCardNumber(CardModel model) //TODO: add server side validation
+        public ViewResult CheckCardNumber(CardModel model) //TODO: add server side validation, remake the duplicated ErrorView
         {
-            var isValid = BusinessController.CheckCardNumber(model.CardNumber);
-            var retVal = isValid ? View("CheckPinView", new PinModel { CardNumber = model.CardNumber }) : View("LoginCardView");
+            ViewResult retVal;
+            long cardNumber;
+            var stringCardNumber = model.CardNumber.Replace("-", string.Empty);
+            if (long.TryParse(stringCardNumber, out cardNumber))
+            {
+                var isValid = BusinessController.CheckCardNumber(cardNumber);
+                retVal = isValid ? View("CheckPinView", new PinModel { CurrentCardNumber = cardNumber })
+                    : View("ErrorView", new ErrorModel { ErrorText = "Card either don't exist or blocked", PreviousAction = "LoginCard" });
+            }
+            else
+            {
+                retVal = View("ErrorView", new ErrorModel { ErrorText = "Card either don't exist or blocked", PreviousAction = "LoginCard" });
+            }
+            
+            
             return retVal;
         }
 
@@ -36,10 +49,10 @@ namespace MVCCashMachine.Controllers
             Session["CardNumber"] = null;
             var numberOfTriesObject = Session["NumberOfTries"];
             var numberOfTries = numberOfTriesObject != null ? (int) numberOfTriesObject : 0;
-            var isValidResult = BusinessController.CheckPinNumber(model.CardNumber, model.Pin, numberOfTries);
+            var isValidResult = BusinessController.CheckPinNumber(model.CurrentCardNumber, model.Pin, numberOfTries);
             if (isValidResult.Successful)
             {
-                Session["CardNumber"] = model.CardNumber;
+                Session["CardNumber"] = model.CurrentCardNumber;
                 var redirect = RedirectToAction("GetOperations", "Home");
                 return redirect;
             }
@@ -50,10 +63,10 @@ namespace MVCCashMachine.Controllers
             }
             else
             {
-                return View("ErrorVIew", new ServerValidatedModel { ErrorModel = "Your card were blocked" });
+                return View("ErrorView", new ErrorModel { ErrorText = "Your card were blocked", PreviousAction = "LoginCard" });
             }
 
-            return View("CheckPinView", new PinModel { CardNumber = model.CardNumber, Pin = model.Pin });
+            return View("ErrorView", new ErrorModel { ErrorText = "Your entered the wrong pin", PreviousAction = "LoginCard" });
         }
 
         public ViewResult GetOperations()
@@ -87,7 +100,7 @@ namespace MVCCashMachine.Controllers
                     DateTime = DateTime.Now
                 });
             }
-            return View("ErrorView", new ServerValidatedModel {ErrorModel = "Not enough money on account"});
+            return View("ErrorView", new ErrorModel { ErrorText = "Not enough money on account", PreviousAction = "ShowWithdrawal" });
         }
     }
 }

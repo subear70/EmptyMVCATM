@@ -98,7 +98,10 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.inputmask.bundle.js" />
+    <Content Include="Scripts\jquery.inputmask.bundle.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\MvcAtm.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\WithdrawalView.cshtml" />
@@ -113,7 +116,7 @@
     <Compile Include="Models\BalanceModel.cs" />
     <Compile Include="Models\CardModel.cs" />
     <Compile Include="Models\PinModel.cs" />
-    <Compile Include="Models\ServerValidatedModel.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\WithdrawalModel.cs" />
     <Compile Include="Models\WithdrawalResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

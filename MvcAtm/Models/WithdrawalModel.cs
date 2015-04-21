@@ -2,7 +2,7 @@
 
 namespace MvcAtm.Models
 {
-    public class WithdrawalModel : ServerValidatedModel
+    public class WithdrawalModel
     {
         public long WithdrawalAmmount { get; set; }
     }

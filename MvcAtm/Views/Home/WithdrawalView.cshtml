@@ -6,9 +6,12 @@
 @{
     using (Html.BeginForm("WithdrawMoney", "Home"))
     {
-        @Html.AntiForgeryToken()
         @Html.TextBoxFor(m => m.WithdrawalAmmount)
         <input type="submit" class="btn btn-default" value="Withdraw" />
+    }
+    using (Html.BeginForm("GetOperations", "Home"))
+    {
+        <input type="submit" class="btn btn-default" value="Exit" />
     }
 }
 

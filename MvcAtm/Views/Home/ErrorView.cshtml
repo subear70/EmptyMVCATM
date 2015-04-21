@@ -1,8 +1,15 @@
-﻿@model MvcAtm.Models.ServerValidatedModel
+﻿@model MvcAtm.Models.ErrorModel
 @{
     ViewBag.Title = "ErrorView";
 }
 
-<h2>ErrorView</h2>
-@Html.DisplayText(Model.ErrorModel)
+<h2>Error View</h2>
+@Html.DisplayTextFor(x => x.ErrorText)
+@{
+    using (Html.BeginForm(Model.PreviousAction, "Home"))
+    {
+        <input type="submit" class="btn btn-default" value="Back" />
+    }
+}
+
 

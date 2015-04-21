@@ -1,6 +1,6 @@
 ﻿namespace MvcAtm.Models
 {
-    public class BalanceModel : ServerValidatedModel
+    public class BalanceModel
     {
         public long Balance { get; set; }
     }

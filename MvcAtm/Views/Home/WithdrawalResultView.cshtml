@@ -13,3 +13,13 @@
 @Html.LabelFor(x => x.DateTime, "DateTime")
 @Html.DisplayTextFor(x => x.DateTime)
 
+@{
+    using (Html.BeginForm("ShowWithdrawal", "Home"))
+    {
+        <input type="submit" class="btn btn-default" value="Back" />
+    }
+    using (Html.BeginForm("LoginCard", "Home"))
+    {
+        <input type="submit" class="btn btn-default" value="Exit" />
+    }
+}

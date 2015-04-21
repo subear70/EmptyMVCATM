@@ -47,6 +47,7 @@ namespace BusinessControllers
                     {
                         card.Active = false;
                         retVal.Blocked = true;
+                        dbContext.SaveChanges();
                     }
                 }
             }
@@ -59,6 +60,9 @@ namespace BusinessControllers
             {
                 var cardNumberString = GetMD5String(cardNumber.ToString(CultureInfo.InvariantCulture));
                 var card = dbContext.Cards.First(x => x.Active || x.CardNumber == cardNumberString);
+                var logInfo = new LogInfo { CardId = cardNumber, OperationCode = 1 };
+                dbContext.Logs.Add(logInfo);
+                dbContext.SaveChanges();
                 return card.Balance;
             }
         }
